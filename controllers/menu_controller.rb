@@ -67,7 +67,7 @@ class MenuController
     print "Email: "
     email = gets.chomp
 
-    adddress_book.add_entry(name, phone_number, email)
+    @adddress_book.add_entry(name, phone_number, email)
 
     system "clear"
     puts "New entry created"
@@ -103,6 +103,6 @@ class MenuController
         system "clear"
         puts "#{selection} is not a valid input"
         entry_submenu(entry)
-      end
-    end,,,,,,,,,,,,,,,,,,,,,
+    end
+  end
 end
