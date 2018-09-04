@@ -67,7 +67,7 @@ class MenuController
     print "Email: "
     email = gets.chomp
 
-    @adddress_book.add_entry(name, phone_number, email)
+    address_book.add_entry(name, phone_number, email)
 
     system "clear"
     puts "New entry created"
