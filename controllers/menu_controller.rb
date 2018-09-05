@@ -63,15 +63,17 @@ class MenuController
 
   def view_entry_number
     system "clear"
-    print "Entry Number to Find: Entry "
-    entry_number = gets.chomp
-    index = entry_number.to_i - 1
-      if entry_number.to_i > 0
-        entry = address_book.entries.fetch(index)
-        puts entry
-      else
+    print "Entry Number to View: "
+    entry_number = gets.chomp.to_i
+    index = entry_number - 1
+      if entry_number <= @address_book.entries.count
+        puts @address_book.entries[index]
+        puts "Press enter to return to the main menu"
+        gets.chomp
         system "clear"
+      else
         puts "#{entry_number} is not a valid input"
+        view_entry_number
       end
     end
 
